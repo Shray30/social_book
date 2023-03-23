@@ -28,6 +28,7 @@ def register(request):
         user_Name = request.POST.get('username')
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
+
         if password1 != password2:
             return HttpResponse('Password Mismatch!!')
         else:
@@ -72,3 +73,5 @@ def logout_Page(request):
 
 def index_Page(request):
     return render(request, 'index.html')
+
+
